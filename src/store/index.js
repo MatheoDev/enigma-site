@@ -65,6 +65,18 @@ export default createStore({
         value: 0,
         label: 'D\'abandon'
       }
+    ],
+    logoPath: [
+      '/src/assets/clesence.png',
+      '/src/assets/ITCE.png',
+      '/src/assets/logo-e-moteph.png',
+      '/src/assets/logo-efs-couleur.png',
+      '/src/assets/M6-DS.webp',
+      '/src/assets/Meelo.png',
+      '/src/assets/S-inter.png',
+      '/src/assets/SLG.jpg',
+      '/src/assets/unicancer.png',
+      '/src/assets/URSSAF.svg.png',
     ]
   },
   mutations: {

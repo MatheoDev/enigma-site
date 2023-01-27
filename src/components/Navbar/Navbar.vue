@@ -4,6 +4,7 @@
 
     <div class="navmenu__items">
       <RouterLink to="/" class="navmenu__item">Accueil</RouterLink>
+      <RouterLink to="/school" class="navmenu__item">Écoles</RouterLink>
       <RouterLink to="/formation" class="navmenu__item">Formations</RouterLink>
       <RouterLink to="/price" class="navmenu__item">Prix</RouterLink>
       <RouterLink to="/partner" class="navmenu__item">Partenaire</RouterLink>
