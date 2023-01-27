@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped>
@@ -38,6 +38,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 .primary {
   font-weight: 700;
+  font-size: 1.3rem;
 }
 
 .navmenu__item {
