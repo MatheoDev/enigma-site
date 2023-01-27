@@ -1,5 +1,8 @@
 <template>
   <div class="card__formation">
+    <div class="price">
+      {{ formation.price }} €
+    </div>
     <div class="card__formation__title">
       {{ formation.title }}
     </div>
@@ -36,6 +39,16 @@ export default {
   margin: 5px 0;
   position: relative;
 }
+.price {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #3F50E7;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 90%);
+}
 .card__formation__btn-dwl {
   position: absolute;
   bottom: -1px;
@@ -46,6 +59,11 @@ export default {
   padding: 5px 2rem;
   border-radius: 10px;
   text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card__formation__btn-dwl:hover {
+  background: #3f50e7cf;
 }
 .card__formation__title {
   font-size: 1.2rem;
