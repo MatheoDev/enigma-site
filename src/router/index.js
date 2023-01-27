@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import PriceView from '../views/PriceView.vue'
+import PartnerView from '../views/PartnerView.vue'
+import ContactView from '../views/ContactView.vue'
+import CandidateView from '../views/CandidateView.vue'
+import FormationView from '../views/FormationView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,27 +17,27 @@ const router = createRouter({
     {
       path: '/formation',
       name: 'formation',
-      component: AboutView
+      component: FormationView
     },
     {
       path: '/price',
       name: 'price',
-      component: AboutView
+      component: PriceView
     },
     {
       path: '/partner',
       name: 'partner',
-      component: AboutView
+      component: PartnerView
     },
     {
       path: '/contact',
       name: 'contact',
-      component: AboutView
+      component: ContactView
     },
     {
       path: '/candidate',
       name: 'candidate',
-      component: AboutView
+      component: CandidateView
     }
   ]
 })
