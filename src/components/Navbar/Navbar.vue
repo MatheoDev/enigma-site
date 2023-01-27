@@ -59,4 +59,10 @@ import { RouterLink } from 'vue-router'
 .navmenu__item_btn:hover {
   background-color: #8E88C1;
 }
+
+@media screen and (max-width: 1024px) {
+  .navmenu__items {
+    display: none;
+  }
+}
 </style>

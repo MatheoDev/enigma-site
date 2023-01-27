@@ -1,96 +1,39 @@
-<script>
-import { RouterLink } from 'vue-router'
+<script setup>
+import HomeJumbotron from '@/components/HomeJumbotron/HomeJumbotron.vue'
+import TauxCard from '../components/TauxCard/TauxCard.vue';
 </script>
 
 <template>
   <div class="home">
-    <div class="home__prez">
-      <div class="home__prez__school">
-        <h1>Enigma School</h1>
-        <div class="home__prez__school__desc">
-          L'ÉCOLE SUPÉRIEURE DES SCIENCES DE L'INFORMATIQUE,
-          <br><br>
-          DÉVELOPPONS L'INTELLIGENCE DE DEMAIN, NOTRE AVENIR, VOS MÉTIERS
-        </div>
-        <RouterLink to="/contact" class="home__prez__btn">Nous contacter</RouterLink>
-      </div>
-      <div class="home__prez__logo">
-        <div class="home__prez__logo__background">
-          <div class="home__prez__logo__img">
-            <img src="@/assets/logo-enigma.png" alt="EnigmaSchool">
-          </div>
-        </div>
-      </div>
+    <HomeJumbotron />
+
+    <div class="home__formations">
+      <TauxCard v-for="taux in $store.state.taux" :key="taux.id" :taux="taux"/>
     </div>
   </div>
 </template>
 
 <style scoped>
-.home {
-  margin: 0 5rem;
-  padding: 7rem 0;
-}
-
-.home__prez {
+.home__formations {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #071341;
+  padding: 7rem 5rem;
 }
 
-.home__prez__school h1 {
-  color: #FFF;
-  font-size: 3rem;
+@media screen and (max-width: 1024px) {
+  .home__formations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 }
 
-.home__prez__school__desc {
-  padding: 4rem 0;
-  color: #8E88C1;
-  font-size: 1rem;
-}
-
-
-.home__prez__btn {
-  background-color: #3F50E7;
-  border: #3F50E7 solid 1px;
-  color: #FFF;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.home__prez__btn:hover {
-  background-color: #3f50e77b;
-}
-
-.home__prez__logo__background {
-  position: relative;
-  width: 450px;
-  height: 450px;
-  background-color: #3F3B62;
-  border-radius: 2%;
-}
-
-.home__prez__logo__background::before {
-  /* triangle transparent dans le coin supérieur gauche */
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 300px solid #24204A;
-  border-right: 350px solid #3F3B62;
-}
-
-.home__prez__logo__img {
-  position: absolute;
-  background-color: #827EAC;
-  padding: 5rem;
-  /** centrer la div au milieu de l'element relatif */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 2%;
+@media screen and (max-width: 1024px) {
+  .home__formations {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
