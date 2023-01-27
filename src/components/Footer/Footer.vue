@@ -14,7 +14,7 @@
       <div class="footer__nav__title">Menu</div>
       <div class="footer__nav__items">
         <RouterLink to="/" class="footer__nav__item">Accueil</RouterLink>
-        <RouterLink to="/formations" class="footer__nav__item">Formations</RouterLink>
+        <RouterLink to="/formation" class="footer__nav__item">Formations</RouterLink>
         <RouterLink to="/price" class="footer__nav__item">Prix</RouterLink>
         <RouterLink to="/partner" class="footer__nav__item">Partenaire</RouterLink>
         <RouterLink to="/contact" class="footer__nav__item">Contact</RouterLink>
