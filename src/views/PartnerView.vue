@@ -1,4 +1,11 @@
-<script setup>
+<script>
+export default {
+  methods: {
+    getHostname() {
+      return location.hostname
+    }
+  }
+}
 </script>
 
 <template>
@@ -6,7 +13,7 @@
     <div class="enterprise__partner">
       <h1>Les partenaires Enigma</h1>
       <div class="list__partner">
-        <img v-for="path in $store.state.logoPath" :src="path" :alt="path" :key="path">
+        <img v-for="path in $store.state.logoPath" :src="getHostname() === 'localhost' ? path : path.replace('/src/', '/')" :alt="path" :key="path">
       </div>
     </div>
     <div class="enterprise__trust">
@@ -29,6 +36,9 @@
 </template>
 
 <style scoped>
+.partner h1 {
+  margin-bottom: 2rem;
+}
 .partner h1, .partner h2 {
   color: #FFF;
   font-size: 1.8rem;
